@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AIs Signup</title>
+	<style>@import url("AIs.css")</style>
+</head>
+
+<body>
+	<form action="AIs_Signup.php" method="post" enctype="multipart/form-data">
+		<label class="cover">
+			<input type="file" id="fileToUpload" name="fileToUpload" accept="image/jpg, image/JPG, image/jpeg, image/png" >
+			<img src="photo_test.jpg" alt=""><br>
+		</label>
+			<div align="center">
+				暱稱 Nickname:<br>
+				<input type="text" id="nickname" name="nickname" maxlength="28"><br><br>
+			</div>
+			&nbsp&nbsp興趣 Hobby:<br>
+			<textarea wrap="virtual" name="hobby">範例:打籃球/唱歌/彈鋼琴/看電影</textarea><br><br>
+			&nbsp&nbsp介紹你自己 Introduce more:<br>
+			<textarea wrap="virtual" name="introduce"></textarea><br><br>
+			<div align="right">
+				<input type="submit" name="submit" value="上傳" />
+			</div>
+	</form>	
+</body>
+</html>
+
+<!-- JavaScript part -->
+<script>
+	
+var img = new FileReader();
+	document.forms[0].elements[0].onchange=function(){
+		img.readAsDataURL(this.files[0]);
+	}
+	img.onloadend=function(){
+		document.images[0].src = this.result;
+	}
+</script>
