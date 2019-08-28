@@ -1,2 +1,2 @@
 # AIs
-AIs smart glasses with face recognition with social platform
+AI-FI smart glasses with face recognition & social platform
